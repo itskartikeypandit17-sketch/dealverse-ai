@@ -2,88 +2,517 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DEALVERSE AI COMPANY</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b19">
+<meta name="description" content="DEALVERSE AI — Explore Artificial Intelligence, technology and digital innovation.">
+<title>DEALVERSE AI | Explore The Future</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #080d20;
-      color: white;
-    }
+<style>
+:root {
+  --bg: #080b19;
+  --panel: #11182b;
+  --blue: #398bff;
+  --purple: #9360ff;
+  --white: #f7f8ff;
+  --muted: #aab5cc;
+}
 
-    header {
-      padding: 22px;
-      text-align: center;
-      border-bottom: 1px solid #25345c;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header h2 {
-      color: #55aaff;
-      letter-spacing: 2px;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    .hero {
-      text-align: center;
-      padding: 90px 20px;
-    }
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
-    .hero h1 {
-      font-size: 38px;
-      margin-bottom: 18px;
-      background: linear-gradient(90deg, #36aaff, #a66aff);
-      color: transparent;
-      background-clip: text;
-    }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-    .hero p {
-      color: #c4cce0;
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
 
-    .hero a {
-      display: inline-block;
-      padding: 14px 25px;
-      background: linear-gradient(90deg, #278fff, #8050ed);
-      color: white;
-      text-decoration: none;
-      border-radius: 9px;
-    }
+/* NAVBAR */
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #9ba8c5;
-    }
-  </style>
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(8,11,25,.94);
+  border-bottom: 1px solid #222c45;
+  backdrop-filter: blur(15px);
+}
+
+nav {
+  min-height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg,#45a5ff,#a16aff);
+  color: transparent;
+  background-clip: text;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: #69aaff;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 25%,
+    rgba(69,104,255,.20), transparent 55%);
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: auto;
+  padding: 90px 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 17px;
+  border: 1px solid #394b80;
+  border-radius: 30px;
+  color: #a8c9ff;
+  font-size: 12px;
+  margin-bottom: 25px;
+  background: rgba(56,111,255,.09);
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(100deg,#55b5ff,#8b6bff,#c17aff);
+  color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  border-radius: 9px;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.btn-primary {
+  background: linear-gradient(100deg,var(--blue),var(--purple));
+  color: white;
+}
+
+.btn-outline {
+  border: 1px solid #53648e;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 85px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  font-size: clamp(27px,5vw,40px);
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+/* TOOLS */
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.tool-card {
+  background: linear-gradient(145deg,#141e37,#101528);
+  border: 1px solid #273554;
+  padding: 27px;
+  border-radius: 16px;
+  transition: .25s;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  border-color: #6a78ff;
+}
+
+.tool-icon {
+  font-size: 31px;
+  margin-bottom: 15px;
+}
+
+.tool-card h3 {
+  margin-bottom: 10px;
+}
+
+.tool-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 11px;
+  color: #c3a9ff;
+  background: #282047;
+  padding: 5px 11px;
+  border-radius: 20px;
+}
+
+/* ABOUT */
+
+.about-box {
+  text-align: center;
+  max-width: 780px;
+  margin: auto;
+  padding: 38px;
+  border: 1px solid #293758;
+  border-radius: 18px;
+  background: linear-gradient(140deg,#121b35,#17132c);
+}
+
+.about-box p {
+  color: var(--muted);
+  margin-top: 15px;
+}
+
+/* TECHNOLOGY */
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+
+.tech-item {
+  text-align: center;
+  padding: 22px 10px;
+  background: #11182a;
+  border: 1px solid #283653;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* CONTACT */
+
+.contact-box {
+  text-align: center;
+  padding: 45px 20px;
+  border-radius: 18px;
+  background: radial-gradient(
+    circle at top,
+    #263c78,
+    #17152d 75%
+  );
+  border: 1px solid #394b80;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 30px 15px;
+  text-align: center;
+  border-top: 1px solid #27314b;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer strong {
+  color: #80aaff;
+}
+
+/* MOBILE */
+
+@media(max-width:750px) {
+  .nav-links {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  section {
+    padding: 65px 0;
+  }
+}
+
+@media(max-width:390px) {
+  .nav-links {
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h2>DEALVERSE AI</h2>
-  </header>
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#home">DEALVERSE AI</a>
 
-  <section class="hero">
-    <h1>Explore The Future</h1>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#tools">AI Tools</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+
+    <span class="tag">
+      ✦ EXPLORE THE WORLD OF AI
+    </span>
+
+    <h1>Explore The Future<br>With AI</h1>
+
     <p>
       Discover Artificial Intelligence,
-      Technology and Digital Innovation.
+      modern technology and digital innovation.
+      A new way to explore the digital world.
     </p>
-    <a href="mailto:hello@example.com">
-      Explore More
-    </a>
-  </section>
 
-  <footer>
-    © 2026 DEALVERSE AI COMPANY
-  </footer>
+    <div class="buttons">
+      <a class="btn btn-primary" href="#tools">
+        Explore AI Tools →
+      </a>
+
+      <a class="btn btn-outline" href="#about">
+        Discover More
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="tools">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Explore AI Tools</h2>
+      <p>Discover the possibilities of artificial intelligence.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <article class="tool-card">
+        <div class="tool-icon">🤖</div>
+        <h3>AI Assistant</h3>
+        <p>
+          Explore how AI assistants can help
+          answer questions and understand information.
+        </p>
+        <span class="status">Coming Soon</span>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-icon">✍️</div>
+        <h3>AI Text Generator</h3>
+        <p>
+          Discover AI-powered text generation
+          and creative writing possibilities.
+        </p>
+        <span class="status">Coming Soon</span>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-icon">💡</div>
+        <h3>AI Idea Generator</h3>
+        <p>
+          Explore new ideas for learning,
+          technology and digital projects.
+        </p>
+        <span class="status">Coming Soon</span>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-icon">🌐</div>
+        <h3>Web Technology</h3>
+        <p>
+          Learn about websites, software
+          and modern web development.
+        </p>
+        <span class="status">Coming Soon</span>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-icon">⚡</div>
+        <h3>AI Productivity</h3>
+        <p>
+          Discover ways AI can support
+          everyday digital workflows.
+        </p>
+        <span class="status">Coming Soon</span>
+      </article>
+
+      <article class="tool-card">
+        <div class="tool-icon">🔬</div>
+        <h3>Tech Innovation</h3>
+        <p>
+          Explore emerging technologies
+          and digital innovation.
+        </p>
+        <span class="status">Coming Soon</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>About DEALVERSE AI</h2>
+      <p>Technology. Creativity. Innovation.</p>
+    </div>
+
+    <div class="about-box">
+      <h2>Building A Digital Future</h2>
+      <p>
+        DEALVERSE AI COMPANY is a developing
+        technology brand focused on exploring
+        artificial intelligence, software,
+        websites and digital innovation.
+        Our goal is to learn, explore and grow
+        with emerging technologies.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="technology">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Technology We Explore</h2>
+      <p>Discover the technologies shaping the digital world.</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-item">🤖 Artificial AI</div>
+      <div class="tech-item">🌐 Web Development</div>
+      <div class="tech-item">💻 Software</div>
+      <div class="tech-item">⚡ Innovation</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box">
+      <h2>Explore. Learn. Innovate.</h2>
+      <p style="color:#c5cce2;margin:15px 0 25px;">
+        The future begins with curiosity.
+      </p>
+      <a href="#home" class="btn btn-primary">
+        Back To Top ↑
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>DEALVERSE AI COMPANY</strong>
+  <p>Explore The Future With AI.</p>
+  <p>© 2026 DEALVERSE AI. All rights reserved.</p>
+</footer>
 
 </body>
   </html>
