@@ -4,619 +4,376 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080b19">
-<meta name="description" content="DEALVERSE AI - Explore AI Image Generation, Content Creation, Resume Building, Logo Design and Presentation Tools.">
-<title>DEALVERSE AI | AI Innovation Platform</title>
-
+<title>DEALVERSE AI | All-in-One AI Platform</title>
+<meta name="description" content="DEALVERSE AI - Smart AI tools for students, creators and businesses.">
 <style>
 :root {
-  --bg: #080b19;
-  --card: #111a30;
-  --blue: #398bff;
-  --purple: #985bff;
-  --white: #f7f8ff;
-  --muted: #aab5cc;
-  --border: #293957;
+ --blue:#2563eb;--dark:#10264d;--light:#eff6ff;
+ --text:#172554;--muted:#64748b;--white:#fff;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
-body {
-  background: var(--bg);
-  color: var(--white);
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.container {
-  width: min(1120px, 90%);
-  margin: auto;
-}
-
-/* NAVIGATION */
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(8,11,25,.96);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid #26334d;
-}
-
-nav {
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-}
-
-.logo {
-  font-size: 21px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  background: linear-gradient(90deg,#45b0ff,#a36aff);
-  color: transparent;
-  background-clip: text;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.nav-links a:hover {
-  color: #65aaff;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 590px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background:
-    radial-gradient(ellipse at 50% 35%,
-    rgba(68,92,255,.23), transparent 60%);
-}
-
-.hero-content {
-  max-width: 850px;
-  margin: auto;
-  padding: 95px 0;
-}
-
-.tag {
-  display: inline-block;
-  padding: 8px 18px;
-  border: 1px solid #42558d;
-  border-radius: 30px;
-  color: #b8caff;
-  background: rgba(57,139,255,.09);
-  font-size: 12px;
-  letter-spacing: 1px;
-  margin-bottom: 25px;
-}
-
-.hero h1 {
-  font-size: clamp(43px,8vw,78px);
-  line-height: 1.1;
-  margin-bottom: 25px;
-  background: linear-gradient(100deg,#55b5ff,#806aff,#c077ff);
-  color: transparent;
-  background-clip: text;
-}
-
-.hero p {
-  max-width: 680px;
-  margin: auto;
-  color: var(--muted);
-  font-size: 18px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 35px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 27px;
-  border-radius: 10px;
-  font-weight: bold;
-  transition: .25s;
-}
-
-.btn-primary {
-  background: linear-gradient(100deg,var(--blue),var(--purple));
-  color: white;
-}
-
-.btn-outline {
-  border: 1px solid #56678e;
-  color: white;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(94,100,255,.2);
-}
-
-/* SECTION COMMON */
-
-section {
-  padding: 85px 0;
-}
-
-.section-heading {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-heading h2 {
-  font-size: clamp(29px,5vw,42px);
-  margin-bottom: 12px;
-}
-
-.section-heading p {
-  color: var(--muted);
-  font-size: 15px;
-}
-
-/* AI TOOLS */
-
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 22px;
-}
-
-.tool-card {
-  position: relative;
-  overflow: hidden;
-  padding: 30px;
-  min-height: 275px;
-  border-radius: 17px;
-  border: 1px solid var(--border);
-  background: linear-gradient(145deg,#151f39,#101527);
-  transition: .3s;
-}
-
-.tool-card::before {
-  content: "";
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  top: -75px;
-  right: -65px;
-  background: rgba(110,90,255,.13);
-  filter: blur(35px);
-  border-radius: 50%;
-}
-
-.tool-card:hover {
-  transform: translateY(-7px);
-  border-color: #7770ff;
-  box-shadow: 0 12px 35px rgba(65,88,200,.13);
-}
-
-.tool-icon {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.tool-card h3 {
-  font-size: 21px;
-  margin-bottom: 12px;
-}
-
-.tool-card p {
-  font-size: 14px;
-  color: var(--muted);
-  min-height: 55px;
-}
-
-.status {
-  display: inline-block;
-  margin-top: 19px;
-  padding: 6px 13px;
-  border-radius: 30px;
-  background: rgba(146,88,255,.16);
-  color: #c9acff;
-  font-size: 12px;
-  border: 1px solid rgba(146,88,255,.2);
-}
-
-/* ABOUT */
-
-.about-box {
-  max-width: 850px;
-  margin: auto;
-  padding: 45px 30px;
-  text-align: center;
-  border-radius: 18px;
-  border: 1px solid var(--border);
-  background: linear-gradient(140deg,#141f3a,#17152f);
-}
-
-.about-box h3 {
-  font-size: 26px;
-}
-
-.about-box p {
-  color: var(--muted);
-  margin-top: 16px;
-}
-
-/* TECHNOLOGY */
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 16px;
-}
-
-.tech-item {
-  text-align: center;
-  padding: 23px 12px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 13px;
-  font-weight: bold;
-  transition: .2s;
-}
-
-.tech-item:hover {
-  border-color: var(--blue);
-  transform: translateY(-3px);
-}
-
-/* CONTACT */
-
-.contact-box {
-  text-align: center;
-  padding: 55px 20px;
-  border-radius: 20px;
-  border: 1px solid #3c4b83;
-  background: radial-gradient(circle at top,#283e79,#17152e 75%);
-}
-
-.contact-box h2 {
-  font-size: clamp(27px,5vw,39px);
-}
-
-.contact-box p {
-  color: #c2cce3;
-  margin: 14px 0 25px;
-}
-
-/* FOOTER */
-
-footer {
-  padding: 35px 15px;
-  text-align: center;
-  border-top: 1px solid #27334c;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.footer-logo {
-  font-size: 19px;
-  font-weight: 900;
-  color: #8e9dff;
-  margin-bottom: 8px;
-}
-
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 18px 0;
-}
-
-.footer-links a:hover {
-  color: white;
-}
-
-/* MOBILE RESPONSIVE */
-
-@media(max-width:800px) {
-  .tools-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .tech-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .nav-links {
-    gap: 12px;
-    font-size: 12px;
-  }
-
-  .logo {
-    font-size: 16px;
-  }
-}
-
-@media(max-width:520px) {
-  .container {
-    width: 91%;
-  }
-
-  nav {
-    min-height: 68px;
-    flex-wrap: wrap;
-    padding: 13px 0;
-  }
-
-  .nav-links {
-    width: 100%;
-    justify-content: space-between;
-    gap: 5px;
-    font-size: 12px;
-  }
-
-  .hero {
-    min-height: 540px;
-  }
-
-  .hero-content {
-    padding: 75px 0;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .tools-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tool-card {
-    min-height: 240px;
-  }
-
-  section {
-    padding: 65px 0;
-  }
-
-  .about-box {
-    padding: 32px 20px;
-  }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f8fbff;color:var(--text)}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer;border:0}
+header{background:white;padding:17px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;box-shadow:0 2px 15px #dbeafe}
+.logo{font-size:23px;font-weight:900;color:var(--blue)}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--dark);text-decoration:none;font-size:14px;font-weight:bold}
+.btn{background:var(--blue);color:white;padding:12px 20px;border-radius:9px;font-weight:bold}
+.btn:hover{background:#1745bd}
+.outline{background:white;color:var(--blue);border:1px solid var(--blue)}
+.hero{text-align:center;padding:85px 18px;background:linear-gradient(135deg,#eff6ff,#dbeafe,#fff)}
+.owner{color:#64748b;font-size:13px;margin:15px 0}
+.hero h1{font-size:clamp(34px,6vw,57px);max-width:850px;margin:15px auto;line-height:1.13}
+.hero h1 span{color:var(--blue)}
+.hero p{color:var(--muted);line-height:1.8;max-width:600px;margin:15px auto 25px}
+section{padding:65px 6%}
+.section-title{text-align:center;font-size:30px;margin-bottom:12px}
+.subtitle{text-align:center;color:var(--muted);margin-bottom:35px;line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:24px;border:1px solid #e2e8f0;border-radius:16px;box-shadow:0 5px 20px #dbeafe66}
+.card h3{margin:12px 0}
+.card p{color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:16px}
+.icon{font-size:34px}
+.price{background:#eaf2ff;text-align:center}
+.price-card{max-width:390px;margin:auto;background:white;padding:35px;border-radius:18px;border:1px solid #bfdbfe}
+.price-card h2{font-size:43px;color:var(--blue);margin:15px}
+.price-card li{list-style:none;padding:9px;color:#475569}
+.tool-page,.dashboard,.auth{display:none;min-height:65vh;padding:45px 6%}
+.panel{max-width:750px;margin:20px auto;background:white;border-radius:17px;padding:28px;border:1px solid #dbeafe}
+.field{margin:16px 0}
+.field label{display:block;font-weight:bold;margin-bottom:8px}
+.field input,.field textarea,.field select{width:100%;padding:13px;border:1px solid #cbd5e1;border-radius:9px;background:white}
+.field textarea{min-height:110px;resize:vertical}
+.result{background:#eff6ff;border-radius:12px;padding:18px;margin-top:20px;white-space:pre-wrap;line-height:1.7;overflow-wrap:anywhere}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+.small{font-size:12px;color:var(--muted);line-height:1.6}
+footer{background:#10264d;color:white;padding:40px 6%;text-align:center}
+footer a{color:#bfdbfe;margin:10px;text-decoration:none}
+footer p{margin:12px;line-height:1.7}
+.hidden{display:none!important}
+.dashboard-top{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:25px}
+.badge{background:#dbeafe;color:#1d4ed8;padding:8px 13px;border-radius:30px;font-size:13px;font-weight:bold}
+.modal{max-width:440px}
+.notice{padding:12px;background:#fff7ed;color:#9a3412;border-radius:9px;font-size:13px;line-height:1.5;margin-top:14px}
+@media(max-width:600px){
+ header{padding:15px 4%}
+ nav{gap:12px}
+ nav a{font-size:12px}
+ section{padding:45px 5%}
+ .hero{padding:60px 16px}
+ .panel{padding:20px}
 }
 </style>
 </head>
-
 <body>
 
 <header>
-  <div class="container">
-    <nav>
-      <a class="logo" href="#home">DEALVERSE AI</a>
-
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#tools">AI Tools</a>
-        <a href="#about">About</a>
-        <a href="#technology">Technology</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
+ <div class="logo">DEALVERSE AI</div>
+ <nav>
+  <a href="#" onclick="home()">Home</a>
+  <a href="#tools" onclick="home()">AI Tools</a>
+  <a href="#pricing" onclick="home()">Pricing</a>
+  <a href="#about" onclick="home()">About</a>
+ </nav>
+ <div>
+  <button class="btn outline" onclick="showAuth('login')">Login</button>
+  <button class="btn" onclick="showAuth('signup')">Start Free</button>
+ </div>
 </header>
 
-<main>
+<main id="homePage">
+ <div class="hero">
+  <div class="logo">DEALVERSE AI</div>
+  <div class="owner">Kartikey Pandey – Owner of DEALVERSE AI</div>
+  <h1>One Platform.<br><span>Unlimited Possibilities.</span></h1>
+  <p>Discover smart AI tools for students, creators and business owners. Create content, resumes, logos, presentations and images.</p>
+  <button class="btn" onclick="showAuth('signup')">Start Free →</button>
+  <button class="btn outline" onclick="showAuth('login')">Login</button>
+  <p class="small">5 Free Uses • Premium ₹99/month</p>
+ </div>
 
-<!-- HERO SECTION -->
+ <section id="tools">
+  <h2 class="section-title">Explore AI Tools</h2>
+  <p class="subtitle">Everything you need in one AI platform.</p>
+  <div class="grid" id="toolCards"></div>
+ </section>
 
-<section class="hero" id="home">
-  <div class="container hero-content">
-
-    <span class="tag">✦ THE FUTURE OF AI INNOVATION</span>
-
-    <h1>Imagine More.<br>Create With AI.</h1>
-
-    <p>
-      Explore the power of Artificial Intelligence.
-      Discover creative tools for images, content,
-      resumes, logos and presentations.
-    </p>
-
-    <div class="buttons">
-      <a href="#tools" class="btn btn-primary">
-        Explore AI Tools →
-      </a>
-
-      <a href="#about" class="btn btn-outline">
-        Discover More
-      </a>
-    </div>
-
+ <section class="price" id="pricing">
+  <h2 class="section-title">Simple Pricing</h2>
+  <p class="subtitle">Start free and upgrade when you need more.</p>
+  <div class="price-card">
+   <span class="badge">Premium Plan</span>
+   <h2>₹99 <small style="font-size:15px">/ month</small></h2>
+   <ul>
+    <li>✓ All Five AI Tools</li>
+    <li>✓ Unlimited Uses for 30 Days</li>
+    <li>✓ Premium Features</li>
+    <li>✓ More Creative Options</li>
+   </ul>
+   <button class="btn" onclick="showAuth('signup')">Get Started</button>
   </div>
-</section>
+ </section>
 
-<!-- FIVE AI TOOLS -->
-
-<section id="tools">
-  <div class="container">
-
-    <div class="section-heading">
-      <span class="tag">OUR AI TOOL COLLECTION</span>
-      <h2>Discover AI Tools</h2>
-      <p>Creative possibilities. Smarter digital experiences.</p>
-    </div>
-
-    <div class="tools-grid">
-
-      <article class="tool-card">
-        <div class="tool-icon">🎨</div>
-        <h3>AI Image Generator</h3>
-        <p>
-          Transform your text prompts and creative
-          ideas into unique AI-generated images.
-        </p>
-        <span class="status">Coming Soon</span>
-      </article>
-
-      <article class="tool-card">
-        <div class="tool-icon">✍️</div>
-        <h3>AI Content Generator</h3>
-        <p>
-          Create blogs, articles, social media captions
-          and creative written content with AI.
-        </p>
-        <span class="status">Coming Soon</span>
-      </article>
-
-      <article class="tool-card">
-        <div class="tool-icon">📄</div>
-        <h3>AI Resume Builder</h3>
-        <p>
-          Build professional resumes with organized
-          layouts and helpful AI writing assistance.
-        </p>
-        <span class="status">Coming Soon</span>
-      </article>
-
-      <article class="tool-card">
-        <div class="tool-icon">✨</div>
-        <h3>AI Logo Generator</h3>
-        <p>
-          Explore creative logo concepts and visual
-          identity ideas for brands and businesses.
-        </p>
-        <span class="status">Coming Soon</span>
-      </article>
-
-      <article class="tool-card">
-        <div class="tool-icon">📊</div>
-        <h3>AI Presentation Maker</h3>
-        <p>
-          Turn your topics and ideas into structured,
-          attractive presentation slides.
-        </p>
-        <span class="status">Coming Soon</span>
-      </article>
-
-    </div>
+ <section id="about">
+  <h2 class="section-title">About DEALVERSE AI</h2>
+  <div class="panel">
+   <h3>Our Mission</h3>
+   <p style="line-height:1.8;color:#64748b;margin:12px 0">
+    DEALVERSE AI is an AI platform designed to make useful AI tools simple and accessible for everyone.
+   </p>
+   <h3>Founder & Owner</h3>
+   <p style="margin-top:10px">Kartikey Pandey</p>
+   <p class="small">Owner of DEALVERSE AI</p>
   </div>
-</section>
+ </section>
 
-<!-- ABOUT SECTION -->
-
-<section id="about">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>About DEALVERSE AI</h2>
-      <p>Exploring technology. Creating possibilities.</p>
-    </div>
-
-    <div class="about-box">
-      <h3>Welcome To The Future Of Digital Innovation</h3>
-
-      <p>
-        DEALVERSE AI COMPANY is a developing
-        technology brand focused on exploring
-        Artificial Intelligence, creative software
-        and digital innovation.
-      </p>
-
-      <p>
-        Our vision is to explore useful AI technologies
-        and develop accessible digital experiences
-        for creative ideas and everyday tasks.
-      </p>
-    </div>
-
+ <section id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <p class="subtitle">Have a question? Send us a message.</p>
+  <div class="panel">
+   <div class="field"><label>Your Name</label><input id="contactName" placeholder="Enter your name"></div>
+   <div class="field"><label>Email</label><input id="contactEmail" type="email" placeholder="Enter email"></div>
+   <div class="field"><label>Message</label><textarea id="contactMessage" placeholder="Write your message"></textarea></div>
+   <button class="btn" onclick="contactDemo()">Submit Message</button>
+   <p id="contactStatus" class="small"></p>
   </div>
-</section>
-
-<!-- TECHNOLOGY SECTION -->
-
-<section id="technology">
-  <div class="container">
-
-    <div class="section-heading">
-      <h2>Technology We Explore</h2>
-      <p>Discover the possibilities of the modern digital world.</p>
-    </div>
-
-    <div class="tech-grid">
-      <div class="tech-item">🤖 Artificial Intelligence</div>
-      <div class="tech-item">🌐 Web Technology</div>
-      <div class="tech-item">💻 Software Innovation</div>
-      <div class="tech-item">🚀 Digital Creativity</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT / FINAL SECTION -->
-
-<section id="contact">
-  <div class="container">
-
-    <div class="contact-box">
-      <h2>Think Beyond Limits.</h2>
-
-      <p>
-        Discover new ideas and explore
-        the possibilities of Artificial Intelligence.
-      </p>
-
-      <a href="#tools" class="btn btn-primary">
-        Explore Our Tools →
-      </a>
-    </div>
-
-  </div>
-</section>
-
+ </section>
 </main>
 
-<!-- FOOTER -->
+<div id="authPage" class="auth">
+ <div class="panel modal">
+  <h2 id="authTitle">Create Account</h2>
+  <div class="field" id="nameField"><label>Name</label><input id="authName" placeholder="Your name"></div>
+  <div class="field"><label>Email</label><input id="authEmail" type="email" placeholder="Your email"></div>
+  <div class="field"><label>Password</label><input id="authPassword" type="password" placeholder="Password"></div>
+  <button class="btn" style="width:100%" onclick="authAction()">Continue</button>
+  <p id="authMessage" class="small"></p>
+  <p style="margin-top:18px;font-size:14px">
+   <a href="#" onclick="showAuth('login')">Login</a> |
+   <a href="#" onclick="showAuth('signup')">Create account</a> |
+   <a href="#" onclick="home()">Home</a>
+  </p>
+  <p class="notice">Demo account only. Real secure registration will be connected through a backend.</p>
+ </div>
+</div>
+
+<div id="dashboard" class="dashboard">
+ <div class="dashboard-top">
+  <div>
+   <h2>Welcome, <span id="userName"></span>!</h2>
+   <p class="small">Your DEALVERSE AI Dashboard</p>
+  </div>
+  <span class="badge" id="usageBadge">5 Free Uses</span>
+ </div>
+ <div class="grid">
+  <div class="card"><h3>Free Uses</h3><h2 id="usageCount">5</h2><p>Remaining demo uses</p></div>
+  <div class="card"><h3>Membership</h3><h2 id="membership">Free</h2><p>Your current plan</p></div>
+ </div>
+ <h2 style="margin:35px 0 20px">Your AI Tools</h2>
+ <div class="grid" id="dashboardTools"></div>
+ <div class="panel">
+  <h3>Premium Membership</h3>
+  <p class="small" style="margin:12px 0">₹99 for 30 days. Payment is not connected in this demo.</p>
+  <button class="btn" onclick="premiumDemo()">View Premium</button>
+  <button class="btn outline" onclick="logout()">Logout</button>
+ </div>
+</div>
+
+<div id="toolPage" class="tool-page">
+ <div class="panel">
+  <button class="btn outline" onclick="dashboardShow()">← Dashboard</button>
+  <h2 id="toolTitle" style="margin:20px 0"></h2>
+  <p id="toolDescription" class="small"></p>
+  <div id="toolFields"></div>
+  <button class="btn" onclick="generate()">Generate</button>
+  <div id="toolResult" class="result hidden"></div>
+  <div class="actions hidden" id="resultActions">
+   <button class="btn outline" onclick="copyResult()">Copy</button>
+   <button class="btn outline" onclick="downloadResult()">Download</button>
+  </div>
+  <p class="notice">This is a frontend demonstration. Real AI generation and image processing require connected AI services.</p>
+ </div>
+</div>
+
+<div id="premiumPage" class="tool-page">
+ <div class="panel">
+  <h2>DEALVERSE AI Premium</h2>
+  <h1 style="color:#2563eb;margin:20px 0">₹99 / Month</h1>
+  <p>30 days of unlimited AI tool usage after verified payment.</p>
+  <p class="notice">Payment gateway is not connected yet. Do not enter payment information here.</p>
+  <button class="btn outline" onclick="dashboardShow()">Back to Dashboard</button>
+ </div>
+</div>
 
 <footer>
-  <div class="footer-logo">DEALVERSE AI</div>
-
-  <p>Explore The Future With Artificial Intelligence.</p>
-
-  <div class="footer-links">
-    <a href="#home">Home</a>
-    <a href="#tools">AI Tools</a>
-    <a href="#about">About</a>
-    <a href="#technology">Technology</a>
-  </div>
-
-  <p>© 2026 DEALVERSE AI COMPANY. All rights reserved.</p>
+ <h2>DEALVERSE AI</h2>
+ <p>Smart AI Tools for Everyone.</p>
+ <p>Kartikey Pandey | Owner of DEALVERSE AI</p>
+ <p><a href="#about">About Us</a><a href="#contact">Contact</a><a href="#pricing">Pricing</a></p>
+ <p class="small" style="color:#bfdbfe">© 2026 DEALVERSE AI. All Rights Reserved.</p>
 </footer>
 
+<script>
+const toolsList=[
+ {id:'content',icon:'✍️',name:'AI Content Generator',desc:'Create posts, captions, blogs, titles and hashtags.'},
+ {id:'resume',icon:'📄',name:'AI Resume Builder',desc:'Create a student or professional resume.'},
+ {id:'logo',icon:'🎨',name:'AI Logo Generator',desc:'Create logo concepts and brand ideas.'},
+ {id:'presentation',icon:'📊',name:'AI Presentation Maker',desc:'Create presentation slides from any topic.'},
+ {id:'image',icon:'🖼️',name:'AI Image Generator',desc:'Upload an image to preview an image workflow.'}
+];
+
+let currentUser=null;
+let currentTool=null;
+let lastResult='';
+
+function cards(){
+ const html=toolsList.map(t=>`
+ <div class="card">
+ <div class="icon">${t.icon}</div><h3>${t.name}</h3>
+ <p>${t.desc}</p><button class="btn" onclick="openTool('${t.id}')">Open Tool →</button>
+ </div>`).join('');
+ document.getElementById('toolCards').innerHTML=html;
+ document.getElementById('dashboardTools').innerHTML=html;
+}
+cards();
+
+function hideAll(){
+ ['homePage','authPage','dashboard','toolPage','premiumPage'].forEach(id=>{
+ document.getElementById(id).style.display='none';
+ });
+}
+function home(){hideAll();document.getElementById('homePage').style.display='block';window.scrollTo(0,0)}
+function showAuth(type){
+ hideAll();
+ document.getElementById('authPage').style.display='block';
+ document.getElementById('authTitle').textContent=type==='signup'?'Create Your Account':'Welcome Back';
+ document.getElementById('nameField').style.display=type==='signup'?'block':'none';
+ document.getElementById('authMessage').textContent='';
+}
+function authAction(){
+ const name=document.getElementById('authName').value.trim();
+ const email=document.getElementById('authEmail').value.trim();
+ const password=document.getElementById('authPassword').value;
+ const signup=document.getElementById('nameField').style.display!=='none';
+ if(!email||!password||(signup&&!name)){
+  document.getElementById('authMessage').textContent='Please complete all required fields.';
+  return;
+ }
+ if(password.length<6){
+  document.getElementById('authMessage').textContent='Password must have at least 6 characters.';
+  return;
+ }
+ // Temporary demo session only. No passwords are stored.
+ currentUser={name:signup?name:email.split('@')[0],email:email,uses:5,premium:false};
+ dashboardShow();
+}
+function dashboardShow(){
+ if(!currentUser){showAuth('login');return}
+ hideAll();
+ document.getElementById('dashboard').style.display='block';
+ document.getElementById('userName').textContent=currentUser.name;
+ document.getElementById('usageCount').textContent=currentUser.premium?'Unlimited':currentUser.uses;
+ document.getElementById('usageBadge').textContent=currentUser.premium?'Premium Unlimited':currentUser.uses+' Free Uses';
+ document.getElementById('membership').textContent=currentUser.premium?'Premium':'Free';
+}
+function logout(){currentUser=null;home()}
+function premiumDemo(){
+ hideAll();document.getElementById('premiumPage').style.display='block';
+}
+function openTool(id){
+ if(!currentUser){showAuth('login');return}
+ currentTool=toolsList.find(t=>t.id===id);
+ hideAll();
+ document.getElementById('toolPage').style.display='block';
+ document.getElementById('toolTitle').textContent=currentTool.name;
+ document.getElementById('toolDescription').textContent=currentTool.desc;
+ document.getElementById('toolResult').classList.add('hidden');
+ document.getElementById('resultActions').classList.add('hidden');
+ let fields='';
+ if(id==='content')fields=`
+ <div class="field"><label>Topic or Subject</label><input id="topic" placeholder="Example: Festival Sale"></div>
+ <div class="field"><label>Platform</label><select id="platform"><option>Instagram</option><option>Facebook</option><option>YouTube</option><option>Blog</option><option>School Project</option></select></div>
+ <div class="field"><label>Content Type</label><select id="contentType"><option>Social Media Post</option><option>Caption</option><option>Title</option><option>Hashtags</option><option>Blog</option><option>School Explanation</option><option>Advertisement</option></select></div>
+ <div class="field"><label>Tone</label><select id="tone"><option>Simple</option><option>Professional</option><option>Creative</option><option>Friendly</option></select></div>`;
+ if(id==='resume')fields=`
+ <div class="field"><label>Full Name</label><input id="rname" placeholder="Your name"></div>
+ <div class="field"><label>Education</label><input id="education" placeholder="Your education"></div>
+ <div class="field"><label>Skills</label><input id="skills" placeholder="Your skills"></div>
+ <div class="field"><label>Hobbies</label><input id="hobbies" placeholder="Your hobbies"></div>
+ <div class="field"><label>Career Objective</label><textarea id="objective" placeholder="Your career objective"></textarea></div>`;
+ if(id==='logo')fields=`
+ <div class="field"><label>Company Name</label><input id="brand" placeholder="Your brand name"></div>
+ <div class="field"><label>Style</label><select id="style"><option>Modern</option><option>Simple</option><option>Minimal</option><option>Professional</option><option>Creative</option></select></div>
+ <div class="field"><label>Preferred Colors</label><input id="colors" placeholder="Blue and white"></div>`;
+ if(id==='presentation')fields=`
+ <div class="field"><label>Presentation Topic</label><input id="ptopic" placeholder="Example: Photosynthesis"></div>
+ <div class="field"><label>Number of Slides</label><input id="slides" type="number" min="1" max="20" value="5"></div>
+ <div class="field"><label>Audience</label><select id="audience"><option>School</option><option>College</option><option>Business</option><option>General</option></select></div>`;
+ if(id==='image')fields=`
+ <div class="field"><label>Upload Reference Image</label><input id="imageFile" type="file" accept="image/*"></div>
+ <div class="field"><label>Describe the changes or new style</label><textarea id="imagePrompt" placeholder="Describe the image you want..."></textarea></div>
+ <p class="small">This demo can preview your selected image but cannot generate a new image yet.</p>
+ <img id="imagePreview" style="max-width:100%;max-height:250px;margin-top:15px;display:none;border-radius:12px">`;
+ document.getElementById('toolFields').innerHTML=fields;
+ if(id==='image'){
+ document.getElementById('imageFile').addEventListener('change',e=>{
+ const file=e.target.files[0];if(!file)return;
+ const preview=document.getElementById('imagePreview');
+ preview.src=URL.createObjectURL(file);preview.style.display='block';
+ });
+ }
+}
+function generate(){
+ if(!currentUser)return;
+ if(!currentUser.premium&&currentUser.uses<=0){
+ alert('Your 5 free uses are finished. Please view Premium.');
+ premiumDemo();return;
+ }
+ let id=currentTool.id,out='';
+ const val=x=>document.getElementById(x)?.value.trim()||'';
+ if(id==='content'){
+ const topic=val('topic');if(!topic){alert('Enter a topic');return}
+ const platform=val('platform'),type=val('contentType');
+ out=`TITLE: ${topic}\n\nPLATFORM: ${platform}\n\nCONTENT:\nHere is a sample ${type.toLowerCase()} about ${topic}. Add useful information, explain the main idea clearly and make it interesting for your audience.\n\nHASHTAGS:\n#${topic.replace(/\W+/g,'')} #${platform} #CreativeContent #Ideas\n\nNote: These are sample suggestions, not verified trending hashtags.`;
+ }
+ if(id==='resume'){
+ if(!val('rname')){alert('Enter your name');return}
+ out=`RESUME\n\n${val('rname')}\n\nEDUCATION\n${val('education')}\n\nSKILLS\n${val('skills')}\n\nHOBBIES\n${val('hobbies')}\n\nCAREER OBJECTIVE\n${val('objective')}\n\nDEALVERSE AI RESUME DRAFT`;
+ }
+ if(id==='logo'){
+ if(!val('brand')){alert('Enter company name');return}
+ out=`LOGO CONCEPT\n\nBrand: ${val('brand')}\nStyle: ${val('style')}\nColors: ${val('colors')}\n\nSuggested idea: Use a clear brand wordmark, a simple matching icon and balanced typography.`;
+ }
+ if(id==='presentation'){
+ const topic=val('ptopic'),n=Math.max(1,Math.min(20,Number(val('slides'))||5));
+ if(!topic){alert('Enter presentation topic');return}
+ out=`PRESENTATION: ${topic}\n\n`;
+ for(let i=1;i<=n;i++)out+=`SLIDE ${i}: ${i===1?'Introduction':i===n?'Conclusion':topic+' - Key Point '+i}\n• Introduce the main idea.\n• Explain an important point.\n• Add a relevant example.\n\n`;
+ }
+ if(id==='image'){
+ const file=document.getElementById('imageFile').files[0];
+ if(!file){alert('Upload a reference image');return}
+ out='Image selected: '+file.name+'\n\nYour reference image has been previewed. Actual image-to-image generation requires an AI image API.';
+ }
+ if(!currentUser.premium)currentUser.uses--;
+ lastResult=out;
+ document.getElementById('toolResult').textContent=out;
+ document.getElementById('toolResult').classList.remove('hidden');
+ document.getElementById('resultActions').classList.remove('hidden');
+}
+function copyResult(){
+ if(lastResult)navigator.clipboard?.writeText(lastResult).then(()=>alert('Copied!')).catch(()=>alert('Please select and copy the text.'));
+}
+function downloadResult(){
+ const blob=new Blob([lastResult],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='dealverse-result.txt';a.click();URL.revokeObjectURL(a.href);
+}
+function contactDemo(){
+ document.getElementById('contactStatus').textContent='Demo only: Contact form backend is not connected yet.';
+}
+home();
+</script>
 </body>
   </html>
   
