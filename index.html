@@ -1,379 +1,380 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DEALVERSE AI | All-in-One AI Platform</title>
-<meta name="description" content="DEALVERSE AI - Smart AI tools for students, creators and businesses.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#075bff">
+<title>DEALVERSE AI — Create • Automate • Grow</title>
 <style>
-:root {
- --blue:#2563eb;--dark:#10264d;--light:#eff6ff;
- --text:#172554;--muted:#64748b;--white:#fff;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#f8fbff;color:var(--text)}
-button,input,textarea,select{font:inherit}
-button{cursor:pointer;border:0}
-header{background:white;padding:17px 6%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;box-shadow:0 2px 15px #dbeafe}
-.logo{font-size:23px;font-weight:900;color:var(--blue)}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:var(--dark);text-decoration:none;font-size:14px;font-weight:bold}
-.btn{background:var(--blue);color:white;padding:12px 20px;border-radius:9px;font-weight:bold}
-.btn:hover{background:#1745bd}
-.outline{background:white;color:var(--blue);border:1px solid var(--blue)}
-.hero{text-align:center;padding:85px 18px;background:linear-gradient(135deg,#eff6ff,#dbeafe,#fff)}
-.owner{color:#64748b;font-size:13px;margin:15px 0}
-.hero h1{font-size:clamp(34px,6vw,57px);max-width:850px;margin:15px auto;line-height:1.13}
-.hero h1 span{color:var(--blue)}
-.hero p{color:var(--muted);line-height:1.8;max-width:600px;margin:15px auto 25px}
-section{padding:65px 6%}
-.section-title{text-align:center;font-size:30px;margin-bottom:12px}
-.subtitle{text-align:center;color:var(--muted);margin-bottom:35px;line-height:1.6}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:white;padding:24px;border:1px solid #e2e8f0;border-radius:16px;box-shadow:0 5px 20px #dbeafe66}
-.card h3{margin:12px 0}
-.card p{color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:16px}
-.icon{font-size:34px}
-.price{background:#eaf2ff;text-align:center}
-.price-card{max-width:390px;margin:auto;background:white;padding:35px;border-radius:18px;border:1px solid #bfdbfe}
-.price-card h2{font-size:43px;color:var(--blue);margin:15px}
-.price-card li{list-style:none;padding:9px;color:#475569}
-.tool-page,.dashboard,.auth{display:none;min-height:65vh;padding:45px 6%}
-.panel{max-width:750px;margin:20px auto;background:white;border-radius:17px;padding:28px;border:1px solid #dbeafe}
-.field{margin:16px 0}
-.field label{display:block;font-weight:bold;margin-bottom:8px}
-.field input,.field textarea,.field select{width:100%;padding:13px;border:1px solid #cbd5e1;border-radius:9px;background:white}
-.field textarea{min-height:110px;resize:vertical}
-.result{background:#eff6ff;border-radius:12px;padding:18px;margin-top:20px;white-space:pre-wrap;line-height:1.7;overflow-wrap:anywhere}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
-.small{font-size:12px;color:var(--muted);line-height:1.6}
-footer{background:#10264d;color:white;padding:40px 6%;text-align:center}
-footer a{color:#bfdbfe;margin:10px;text-decoration:none}
-footer p{margin:12px;line-height:1.7}
-.hidden{display:none!important}
-.dashboard-top{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:25px}
-.badge{background:#dbeafe;color:#1d4ed8;padding:8px 13px;border-radius:30px;font-size:13px;font-weight:bold}
-.modal{max-width:440px}
-.notice{padding:12px;background:#fff7ed;color:#9a3412;border-radius:9px;font-size:13px;line-height:1.5;margin-top:14px}
-@media(max-width:600px){
- header{padding:15px 4%}
- nav{gap:12px}
- nav a{font-size:12px}
- section{padding:45px 5%}
- .hero{padding:60px 16px}
- .panel{padding:20px}
-}
+:root{--blue:#075bff;--blue2:#00a6ff;--navy:#071b55;--ink:#101a32;--muted:#65728a;--bg:#f5f9ff;--line:#e5edfa;--white:#fff;--gold:#ffbf18;--shadow:0 14px 40px #123d7814}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+.wrap{max-width:1220px;margin:auto;padding:0 22px}
+.topbar{height:76px;background:#ffffffed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900;font-size:22px;letter-spacing:-.8px}
+.brandmark{width:40px;height:40px;border-radius:13px;background:linear-gradient(140deg,#064bda,#24c1ff);display:grid;place-items:center;color:white;font-weight:1000;font-size:25px;box-shadow:0 8px 20px #075bff40}
+.brand small{display:block;font-size:10px;color:#62718c;letter-spacing:1.2px;margin-top:-3px}
+.navlinks{display:flex;align-items:center;gap:24px}
+.navlinks a{color:#29354c;text-decoration:none;font-size:14px;font-weight:700}
+.navlinks a:hover{color:var(--blue)}
+.navactions{display:flex;gap:9px}
+.btn{border:0;border-radius:13px;padding:12px 18px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s;text-decoration:none}
+.btn:hover{transform:translateY(-2px)}
+.primary{color:white;background:linear-gradient(110deg,var(--blue),#079cff);box-shadow:0 8px 20px #075bff30}
+.outline{background:white;color:var(--blue);border:1px solid #b9d0ff}
+.soft{background:#edf4ff;color:#075bff}
+.gold{background:linear-gradient(100deg,#ffd84a,#ffae00);color:#17203a}
+.small{padding:9px 13px;font-size:13px}
+.menu{display:none;background:white;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:20px}
+.hero{padding:55px 0 38px;background:radial-gradient(circle at 80% 20%,#d6e9ff 0,transparent 34%),linear-gradient(115deg,#fff 15%,#eff7ff 100%);overflow:hidden}
+.heroGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #c9dcff;background:#fff;border-radius:30px;padding:8px 13px;color:#075bff;font-size:12px;font-weight:900;letter-spacing:.5px}
+.hero h1{font-size:clamp(42px,6vw,72px);line-height:.99;letter-spacing:-3px;margin:18px 0 14px;font-weight:950}
+.blueText{background:linear-gradient(100deg,#075bff,#00a7ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;line-height:1.6;color:#465570;max-width:620px}
+.heroBtns{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0 18px}
+.proof{display:flex;gap:20px;flex-wrap:wrap;color:#34415a;font-size:13px;font-weight:800}
+.proof span{display:flex;gap:7px;align-items:center}
+.robotPanel{min-height:350px;border-radius:34px;background:linear-gradient(145deg,#d9ebff,#8fc5ff 65%,#eaf7ff);position:relative;display:grid;place-items:center;overflow:hidden;box-shadow:0 25px 65px #2168b52b}
+.orbit{position:absolute;border:1px solid #ffffffa6;border-radius:50%;width:310px;height:310px}
+.orbit.two{width:410px;height:410px}
+.robot{font-size:150px;filter:drop-shadow(0 20px 18px #1756a34a);z-index:1}
+.floatTag{position:absolute;z-index:2;background:#fff;border:1px solid #dceaff;border-radius:15px;padding:12px 15px;font-size:13px;font-weight:900;box-shadow:var(--shadow)}
+.tag1{left:18px;top:35px}
+.tag2{right:15px;bottom:35px}
+.spark{position:absolute;color:white;font-size:26px}
+.s1{top:28px;right:70px}
+.s2{bottom:70px;left:55px}
+.section{padding:58px 0}
+.sectionHead{text-align:center;margin-bottom:30px}
+.sectionHead .kicker{color:var(--blue);font-weight:900;font-size:12px;letter-spacing:1.4px;text-transform:uppercase}
+.sectionHead h2{font-size:clamp(27px,4vw,39px);margin:8px 0;color:#101a32;letter-spacing:-1.3px}
+.sectionHead p{color:var(--muted);margin:0}
+.toolsGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.toolCard{background:white;border:1px solid var(--line);border-radius:22px;padding:22px 17px;text-align:center;box-shadow:var(--shadow);transition:.22s;display:flex;flex-direction:column;align-items:center;min-height:250px}
+.toolCard:hover{transform:translateY(-6px);border-color:#a9c7ff;box-shadow:0 20px 40px #174c991c}
+.toolIcon{width:57px;height:57px;border-radius:18px;display:grid;place-items:center;font-size:28px;margin-bottom:13px}
+.toolCard h3{font-size:16px;margin:0 0 8px}
+.toolCard p{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 16px;flex:1}
+.toolCard .btn{width:100%;font-size:13px;padding:10px}
+.trendSection{background:#edf5ff}
+.trendGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.trendBox{background:white;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
+.trendBox h3{margin:0 0 6px}
+.trendBox p{color:var(--muted);font-size:13px;margin:0 0 16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:8px 11px;border-radius:30px;background:#eff5ff;color:#2453a6;font-size:12px;font-weight:800}
+.notice{border-left:3px solid var(--gold);background:#fff9e7;padding:11px 13px;border-radius:8px;color:#71540b;font-size:12px;line-height:1.5;margin-top:15px}
+.premium{padding:45px 0;background:linear-gradient(110deg,#101fa2,#073eae 52%,#061b56);color:white}
+.premiumGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.premium h2{font-size:clamp(30px,4vw,43px);margin:0 0 10px}
+.premium p{color:#d7e4ff;line-height:1.6}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px;font-size:14px;font-weight:750}
+.checks span:before{content:"✓";display:inline-grid;place-items:center;background:#ffca2f;color:#17203a;width:22px;height:22px;border-radius:50%;margin-right:8px}
+.priceCard{background:#0b205d;border:1px solid #ffcf31;border-radius:24px;padding:25px;text-align:center;box-shadow:0 15px 45px #0003}
+.priceCard .popular{color:#151d36;background:#ffd32d;border-radius:30px;padding:7px 15px;font-weight:950;font-size:12px;display:inline-block}
+.price{font-size:48px;font-weight:950;margin:8px 0}
+.price small{font-size:16px;color:#d6e5ff}
+.priceCard ul{text-align:left;color:#e3edff;line-height:2;font-size:13px;padding-left:20px}
+.howGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.how{background:white;border:1px solid var(--line);border-radius:18px;padding:22px}
+.how b{display:block;margin:10px 0}
+.how p{font-size:13px;color:var(--muted);line-height:1.55;margin:0}
+.step{width:36px;height:36px;border-radius:12px;background:#eaf2ff;color:var(--blue);display:grid;place-items:center;font-weight:950}
+footer{background:#081735;color:#d9e5ff;padding:40px 0 22px}
+.footGrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}
+.footGrid p,.footGrid a{font-size:13px;color:#aebfdf;line-height:1.8}
+.footGrid a{display:block;text-decoration:none}
+.copyright{border-top:1px solid #ffffff1c;margin-top:25px;padding-top:18px;color:#8ea3c9;font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.modal{display:none;position:fixed;inset:0;background:#061633a8;z-index:50;padding:18px;overflow:auto;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modalBox{background:white;border-radius:23px;width:min(650px,100%);padding:25px;box-shadow:0 30px 90px #0004;position:relative}
+.close{position:absolute;right:15px;top:12px;border:0;background:#edf3ff;border-radius:10px;padding:8px 11px;font-size:18px}
+.modalBox h2{margin:0 35px 7px 0}
+.muted{color:var(--muted);font-size:13px;line-height:1.5}
+.field{margin:14px 0}
+.field label{display:block;font-size:13px;font-weight:800;margin-bottom:7px}
+.field input,.field select,.field textarea{width:100%;border:1px solid #d8e3f3;border-radius:12px;padding:12px 13px;outline:none;background:#fbfdff}
+.field textarea{min-height:105px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:#75a8ff;box-shadow:0 0 0 3px #075bff12}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.result{background:#f1f6ff;border:1px solid #dce9ff;border-radius:14px;padding:15px;margin-top:15px;white-space:pre-wrap;line-height:1.55;font-size:14px;min-height:70px}
+.resultTitle{font-size:12px;color:#075bff;font-weight:900;text-transform:uppercase;letter-spacing:.8px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#10234a;color:white;padding:12px 17px;border-radius:12px;z-index:80;font-size:13px;transition:.25s;box-shadow:var(--shadow)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.usage{font-size:12px;color:#4e607c;background:#f1f6ff;border-radius:20px;padding:8px 12px;font-weight:800}
+@media(max-width:950px){.toolsGrid{grid-template-columns:repeat(2,1fr)}.heroGrid{grid-template-columns:1fr .85fr}.navlinks{gap:12px}.navlinks a{font-size:12px}}
+@media(max-width:700px){.wrap{padding:0 15px}.topbar{height:66px}.brand{font-size:18px}.brandmark{width:36px;height:36px}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:white;padding:18px;box-shadow:var(--shadow);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.navactions .outline{display:none}.navactions .btn{padding:9px 11px;font-size:12px}.menu{display:block}.hero{padding:38px 0 30px}.heroGrid{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.hero p{font-size:15px}.robotPanel{min-height:270px}.robot{font-size:118px}.orbit{width:230px;height:230px}.orbit.two{width:300px;height:300px}.section{padding:43px 0}.toolsGrid{grid-template-columns:1fr 1fr;gap:10px}.toolCard{padding:17px 12px;min-height:238px}.toolCard h3{font-size:14px}.toolCard p{font-size:12px}.trendGrid,.premiumGrid,.howGrid,.footGrid{grid-template-columns:1fr}.checks{font-size:12px}.premium{padding:38px 0}.two{grid-template-columns:1fr}.modalBox{padding:21px 16px}.proof{gap:12px;font-size:11px}}
+@media(max-width:380px){.toolsGrid{grid-template-columns:1fr}.hero h1{font-size:41px}}
 </style>
 </head>
 <body>
 
-<header>
- <div class="logo">DEALVERSE AI</div>
- <nav>
-  <a href="#" onclick="home()">Home</a>
-  <a href="#tools" onclick="home()">AI Tools</a>
-  <a href="#pricing" onclick="home()">Pricing</a>
-  <a href="#about" onclick="home()">About</a>
- </nav>
- <div>
-  <button class="btn outline" onclick="showAuth('login')">Login</button>
-  <button class="btn" onclick="showAuth('signup')">Start Free</button>
- </div>
+<header class="topbar">
+<div class="wrap nav">
+<a class="brand" href="#home">
+<span class="brandmark">D</span>
+<span>DEALVERSE <span class="blueText">AI</span><small>CREATE • AUTOMATE • GROW</small></span>
+</a>
+<nav class="navlinks" id="navlinks">
+<a href="#home">Home</a>
+<a href="#tools">AI Tools ▾</a>
+<a href="#trending">Trending</a>
+<a href="#pricing">Pricing</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="navactions">
+<span class="usage" id="usage">5 free uses left</span>
+<button class="btn outline small" onclick="openAuth('login')">Login</button>
+<button class="btn primary small" onclick="openAuth('signup')">Sign up</button>
+<button class="menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+</div>
+</div>
 </header>
 
-<main id="homePage">
- <div class="hero">
-  <div class="logo">DEALVERSE AI</div>
-  <div class="owner">Kartikey Pandey – Owner of DEALVERSE AI</div>
-  <h1>One Platform.<br><span>Unlimited Possibilities.</span></h1>
-  <p>Discover smart AI tools for students, creators and business owners. Create content, resumes, logos, presentations and images.</p>
-  <button class="btn" onclick="showAuth('signup')">Start Free →</button>
-  <button class="btn outline" onclick="showAuth('login')">Login</button>
-  <p class="small">5 Free Uses • Premium ₹99/month</p>
- </div>
+<main>
+<section class="hero" id="home">
+<div class="wrap heroGrid">
+<div>
+<span class="eyebrow">✦ YOUR CREATIVE AI WORKSPACE</span>
+<h1>DEALVERSE <span class="blueText">AI</span><br><span class="blueText">Create More.</span><br>Grow Faster.</h1>
+<p>One smart workspace for content, resumes, logos, presentations and creative images. Bring your ideas to life with AI-powered tools.</p>
+<div class="heroBtns">
+<a class="btn primary" href="#tools">🚀 Explore AI Tools</a>
+<a class="btn outline" href="#pricing">♛ View Premium</a>
+</div>
+<div class="proof">
+<span>⚡ 5 Free Uses</span>
+<span>🔒 Secure-ready design</span>
+<span>✦ Premium from ₹99/month</span>
+</div>
+</div>
+<div class="robotPanel">
+<div class="orbit"></div>
+<div class="orbit two"></div>
+<span class="spark s1">✦</span>
+<span class="spark s2">✧</span>
+<div class="floatTag tag1">✦ Smarter Tools<br>Brighter Future</div>
+<div class="robot">🤖</div>
+<div class="floatTag tag2">⚡ Your AI workspace</div>
+</div>
+</div>
+</section>
 
- <section id="tools">
-  <h2 class="section-title">Explore AI Tools</h2>
-  <p class="subtitle">Everything you need in one AI platform.</p>
-  <div class="grid" id="toolCards"></div>
- </section>
+<section class="section" id="tools">
+<div class="wrap">
+<div class="sectionHead">
+<div class="kicker">Powerful AI workspace</div>
+<h2>Explore Our <span class="blueText">5 AI Tools</span></h2>
+<p>Useful creative tools in one simple dashboard.</p>
+</div>
+<div class="toolsGrid">
+<div class="toolCard">
+<div class="toolIcon" style="background:#eeeaff;color:#694cff">✍️</div>
+<h3>AI Content Generator</h3>
+<p>Posts, captions, titles, blogs, hashtags and content ideas.</p>
+<button class="btn primary" onclick="openTool('content')">Try Content AI →</button>
+</div>
+<div class="toolCard">
+<div class="toolIcon" style="background:#e5fff2;color:#0baf69">📄</div>
+<h3>AI Resume Builder</h3>
+<p>Create a clear student or professional resume with helpful suggestions.</p>
+<button class="btn primary" onclick="openTool('resume')">Build Resume →</button>
+</div>
+<div class="toolCard">
+<div class="toolIcon" style="background:#fff0e5;color:#f17b19">🎨</div>
+<h3>AI Logo Generator</h3>
+<p>Explore brand directions, logo concepts and visual prompts.</p>
+<button class="btn primary" onclick="openTool('logo')">Create Logo →</button>
+</div>
+<div class="toolCard">
+<div class="toolIcon" style="background:#ffe9ef;color:#ef4776">📊</div>
+<h3>AI Presentation Maker</h3>
+<p>Turn a topic into structured slides with titles and key points.</p>
+<button class="btn primary" onclick="openTool('presentation')">Make Slides →</button>
+</div>
+<div class="toolCard">
+<div class="toolIcon" style="background:#e5faff;color:#079bb9">🖼️</div>
+<h3>AI Image Generator</h3>
+<p>Prepare image prompts and creative variations from your ideas.</p>
+<button class="btn primary" onclick="openTool('image')">Create Image →</button>
+</div>
+</div>
+</div>
+</section>
 
- <section class="price" id="pricing">
-  <h2 class="section-title">Simple Pricing</h2>
-  <p class="subtitle">Start free and upgrade when you need more.</p>
-  <div class="price-card">
-   <span class="badge">Premium Plan</span>
-   <h2>₹99 <small style="font-size:15px">/ month</small></h2>
-   <ul>
-    <li>✓ All Five AI Tools</li>
-    <li>✓ Unlimited Uses for 30 Days</li>
-    <li>✓ Premium Features</li>
-    <li>✓ More Creative Options</li>
-   </ul>
-   <button class="btn" onclick="showAuth('signup')">Get Started</button>
-  </div>
- </section>
+<section class="section trendSection" id="trending">
+<div class="wrap">
+<div class="sectionHead">
+<div class="kicker">Stay ahead of the curve</div>
+<h2>Trending <span class="blueText">Discovery</span></h2>
+<p>Ideas and hashtag starters to help plan timely content.</p>
+</div>
+<div class="trendGrid">
+<div class="trendBox">
+<h3>🔥 Content Ideas</h3>
+<p>Starter themes you can adapt to your audience.</p>
+<div class="chips">
+<span class="chip">AI productivity</span>
+<span class="chip">Student life</span>
+<span class="chip">Creator tips</span>
+<span class="chip">Small business</span>
+<span class="chip">Useful apps</span>
+<span class="chip">How-to guides</span>
+</div>
+</div>
+<div class="trendBox">
+<h3>＃ Hashtag Starters</h3>
+<p>Use relevant tags; check current platform trends before publishing.</p>
+<div class="chips">
+<span class="chip">#ContentCreator</span>
+<span class="chip">#AItips</span>
+<span class="chip">#LearnWithMe</span>
+<span class="chip">#SmallBusiness</span>
+<span class="chip">#CreatorLife</span>
+<span class="chip">#DigitalSkills</span>
+</div>
+</div>
+</div>
+<div class="notice">Live trending rankings are not connected yet. These are sample topic and hashtag ideas, not verified live trends. A live trend-data provider/API must be connected to show current rankings accurately.</div>
+</div>
+</section>
 
- <section id="about">
-  <h2 class="section-title">About DEALVERSE AI</h2>
-  <div class="panel">
-   <h3>Our Mission</h3>
-   <p style="line-height:1.8;color:#64748b;margin:12px 0">
-    DEALVERSE AI is an AI platform designed to make useful AI tools simple and accessible for everyone.
-   </p>
-   <h3>Founder & Owner</h3>
-   <p style="margin-top:10px">Kartikey Pandey</p>
-   <p class="small">Owner of DEALVERSE AI</p>
-  </div>
- </section>
+<section class="premium" id="pricing">
+<div class="wrap premiumGrid">
+<div>
+<div class="eyebrow">♛ DEALVERSE PREMIUM</div>
+<h2>Upgrade to <span style="color:#ffd43b">Premium</span></h2>
+<p>More creative freedom, advanced options and a smoother workflow. Premium benefits become active only after secure payment verification and API setup.</p>
+<div class="checks">
+<span>Higher usage allowance</span>
+<span>Advanced templates</span>
+<span>More design options</span>
+<span>High-quality export options</span>
+<span>Priority processing where supported</span>
+<span>Premium model access where configured</span>
+</div>
+</div>
+<div class="priceCard">
+<span class="popular">SIMPLE MONTHLY PLAN</span>
+<div class="price">₹99 <small>/ month</small></div>
+<p>Designed for creators, learners and small businesses.</p>
+<ul>
+<li>Premium features for 30 days</li>
+<li>Advanced tool options</li>
+<li>Usage subject to fair-use and provider limits</li>
+</ul>
+<button class="btn gold" style="width:100%" onclick="premiumInfo()">♛ Get Premium</button>
+<p style="font-size:11px;margin-bottom:0">Payment gateway is not connected in this preview.</p>
+</div>
+</div>
+</section>
 
- <section id="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <p class="subtitle">Have a question? Send us a message.</p>
-  <div class="panel">
-   <div class="field"><label>Your Name</label><input id="contactName" placeholder="Enter your name"></div>
-   <div class="field"><label>Email</label><input id="contactEmail" type="email" placeholder="Enter email"></div>
-   <div class="field"><label>Message</label><textarea id="contactMessage" placeholder="Write your message"></textarea></div>
-   <button class="btn" onclick="contactDemo()">Submit Message</button>
-   <p id="contactStatus" class="small"></p>
-  </div>
- </section>
+<section class="section" id="about">
+<div class="wrap">
+<div class="sectionHead">
+<div class="kicker">Simple workflow</div>
+<h2>How <span class="blueText">It Works</span></h2>
+<p>Start with an idea, choose a tool and shape your result.</p>
+</div>
+<div class="howGrid">
+<div class="how">
+<span class="step">01</span>
+<b>Choose a tool</b>
+<p>Select the tool that matches your task—content, resume, logo, slides or image.</p>
+</div>
+<div class="how">
+<span class="step">02</span>
+<b>Enter your details</b>
+<p>Give clear instructions, topic, style and other relevant information.</p>
+</div>
+<div class="how">
+<span class="step">03</span>
+<b>Generate and refine</b>
+<p>Review the output, improve it and export when the connected service supports it.</p>
+</div>
+</div>
+<div style="text-align:center;margin-top:30px;color:#66738a;font-size:13px">Created by <b style="color:#1c3157">Kartikey Pandey</b> · Owner of DEALVERSE AI</div>
+</div>
+</section>
 </main>
 
-<div id="authPage" class="auth">
- <div class="panel modal">
-  <h2 id="authTitle">Create Account</h2>
-  <div class="field" id="nameField"><label>Name</label><input id="authName" placeholder="Your name"></div>
-  <div class="field"><label>Email</label><input id="authEmail" type="email" placeholder="Your email"></div>
-  <div class="field"><label>Password</label><input id="authPassword" type="password" placeholder="Password"></div>
-  <button class="btn" style="width:100%" onclick="authAction()">Continue</button>
-  <p id="authMessage" class="small"></p>
-  <p style="margin-top:18px;font-size:14px">
-   <a href="#" onclick="showAuth('login')">Login</a> |
-   <a href="#" onclick="showAuth('signup')">Create account</a> |
-   <a href="#" onclick="home()">Home</a>
-  </p>
-  <p class="notice">Demo account only. Real secure registration will be connected through a backend.</p>
- </div>
+<footer id="contact">
+<div class="wrap">
+<div class="footGrid">
+<div>
+<a class="brand" href="#home" style="color:white">
+<span class="brandmark">D</span>
+<span>DEALVERSE AI<small style="color:#aebfdf">CREATE • AUTOMATE • GROW</small></span>
+</a>
+<p>Your all-in-one creative AI workspace. This preview demonstrates the interface; live AI services and payments require secure integrations.</p>
 </div>
-
-<div id="dashboard" class="dashboard">
- <div class="dashboard-top">
-  <div>
-   <h2>Welcome, <span id="userName"></span>!</h2>
-   <p class="small">Your DEALVERSE AI Dashboard</p>
-  </div>
-  <span class="badge" id="usageBadge">5 Free Uses</span>
- </div>
- <div class="grid">
-  <div class="card"><h3>Free Uses</h3><h2 id="usageCount">5</h2><p>Remaining demo uses</p></div>
-  <div class="card"><h3>Membership</h3><h2 id="membership">Free</h2><p>Your current plan</p></div>
- </div>
- <h2 style="margin:35px 0 20px">Your AI Tools</h2>
- <div class="grid" id="dashboardTools"></div>
- <div class="panel">
-  <h3>Premium Membership</h3>
-  <p class="small" style="margin:12px 0">₹99 for 30 days. Payment is not connected in this demo.</p>
-  <button class="btn" onclick="premiumDemo()">View Premium</button>
-  <button class="btn outline" onclick="logout()">Logout</button>
- </div>
+<div>
+<b>Explore</b>
+<a href="#tools">AI Tools</a>
+<a href="#trending">Trending</a>
+<a href="#pricing">Pricing</a>
 </div>
-
-<div id="toolPage" class="tool-page">
- <div class="panel">
-  <button class="btn outline" onclick="dashboardShow()">← Dashboard</button>
-  <h2 id="toolTitle" style="margin:20px 0"></h2>
-  <p id="toolDescription" class="small"></p>
-  <div id="toolFields"></div>
-  <button class="btn" onclick="generate()">Generate</button>
-  <div id="toolResult" class="result hidden"></div>
-  <div class="actions hidden" id="resultActions">
-   <button class="btn outline" onclick="copyResult()">Copy</button>
-   <button class="btn outline" onclick="downloadResult()">Download</button>
-  </div>
-  <p class="notice">This is a frontend demonstration. Real AI generation and image processing require connected AI services.</p>
- </div>
+<div>
+<b>Information</b>
+<a href="#about">About</a>
+<a href="mailto:hello@dealverse.ai">Contact: hello@dealverse.ai</a>
+<a href="#home">Back to top ↑</a>
 </div>
-
-<div id="premiumPage" class="tool-page">
- <div class="panel">
-  <h2>DEALVERSE AI Premium</h2>
-  <h1 style="color:#2563eb;margin:20px 0">₹99 / Month</h1>
-  <p>30 days of unlimited AI tool usage after verified payment.</p>
-  <p class="notice">Payment gateway is not connected yet. Do not enter payment information here.</p>
-  <button class="btn outline" onclick="dashboardShow()">Back to Dashboard</button>
- </div>
 </div>
-
-<footer>
- <h2>DEALVERSE AI</h2>
- <p>Smart AI Tools for Everyone.</p>
- <p>Kartikey Pandey | Owner of DEALVERSE AI</p>
- <p><a href="#about">About Us</a><a href="#contact">Contact</a><a href="#pricing">Pricing</a></p>
- <p class="small" style="color:#bfdbfe">© 2026 DEALVERSE AI. All Rights Reserved.</p>
+<div class="copyright">
+<span>© 2026 DEALVERSE AI. All rights reserved.</span>
+<span>Built by Kartikey Pandey</span>
+</div>
+</div>
 </footer>
 
+<div class="modal" id="toolModal" onclick="backdropClose(event,'toolModal')">
+<div class="modalBox">
+<button class="close" onclick="closeModal('toolModal')">×</button>
+<h2 id="toolTitle">AI Tool</h2>
+<p class="muted" id="toolDesc">Enter your details to get started.</p>
+<div id="toolFields"></div>
+<button class="btn primary" id="generateBtn" style="width:100%" onclick="generateDemo()">Generate Preview</button>
+<div id="resultWrap" style="display:none">
+<div class="resultTitle" style="margin-top:16px">Preview output — sample only</div>
+<div class="result" id="toolResult"></div>
+<button class="btn soft small" style="margin-top:10px" onclick="copyResult()">Copy result</button>
+</div>
+<p class="muted" style="margin-top:14px">Real AI generation will be enabled after a secure AI API and backend are connected.</p>
+</div>
+</div>
+
+<div class="modal" id="authModal" onclick="backdropClose(event,'authModal')">
+<div class="modalBox" style="max-width:430px">
+<button class="close" onclick="closeModal('authModal')">×</button>
+<h2 id="authTitle">Welcome</h2>
+<p class="muted">Preview-only account form. Do not enter a real password here.</p>
+<div class="field">
+<label>Email</label>
+<input id="authEmail" type="email" placeholder="you@example.com">
+</div>
+<div class="field">
+<label>Password</label>
+<input id="authPassword" type="password" placeholder="Demo password">
+</div>
+<button class="btn primary" style="width:100%" onclick="demoAuth()">Continue</button>
+<p class="muted" id="authSwitch" style="text-align:center;margin-top:15px">New here? <a href="#" onclick="openAuth('signup');return false">Create account</a></p>
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
 <script>
-const toolsList=[
- {id:'content',icon:'✍️',name:'AI Content Generator',desc:'Create posts, captions, blogs, titles and hashtags.'},
- {id:'resume',icon:'📄',name:'AI Resume Builder',desc:'Create a student or professional resume.'},
- {id:'logo',icon:'🎨',name:'AI Logo Generator',desc:'Create logo concepts and brand ideas.'},
- {id:'presentation',icon:'📊',name:'AI Presentation Maker',desc:'Create presentation slides from any topic.'},
- {id:'image',icon:'🖼️',name:'AI Image Generator',desc:'Upload an image to preview an image workflow.'}
-];
+const FREE_LIMIT=5;
+let currentTool='content',lastResult='';
 
-let currentUser=null;
-let currentTool=null;
-let lastResult='';
-
-function cards(){
- const html=toolsList.map(t=>`
- <div class="card">
- <div class="icon">${t.icon}</div><h3>${t.name}</h3>
- <p>${t.desc}</p><button class="btn" onclick="openTool('${t.id}')">Open Tool →</button>
- </div>`).join('');
- document.getElementById('toolCards').innerHTML=html;
- document.getElementById('dashboardTools').innerHTML=html;
-}
-cards();
-
-function hideAll(){
- ['homePage','authPage','dashboard','toolPage','premiumPage'].forEach(id=>{
- document.getElementById(id).style.display='none';
- });
-}
-function home(){hideAll();document.getElementById('homePage').style.display='block';window.scrollTo(0,0)}
-function showAuth(type){
- hideAll();
- document.getElementById('authPage').style.display='block';
- document.getElementById('authTitle').textContent=type==='signup'?'Create Your Account':'Welcome Back';
- document.getElementById('nameField').style.display=type==='signup'?'block':'none';
- document.getElementById('authMessage').textContent='';
-}
-function authAction(){
- const name=document.getElementById('authName').value.trim();
- const email=document.getElementById('authEmail').value.trim();
- const password=document.getElementById('authPassword').value;
- const signup=document.getElementById('nameField').style.display!=='none';
- if(!email||!password||(signup&&!name)){
-  document.getElementById('authMessage').textContent='Please complete all required fields.';
-  return;
- }
- if(password.length<6){
-  document.getElementById('authMessage').textContent='Password must have at least 6 characters.';
-  return;
- }
- // Temporary demo session only. No passwords are stored.
- currentUser={name:signup?name:email.split('@')[0],email:email,uses:5,premium:false};
- dashboardShow();
-}
-function dashboardShow(){
- if(!currentUser){showAuth('login');return}
- hideAll();
- document.getElementById('dashboard').style.display='block';
- document.getElementById('userName').textContent=currentUser.name;
- document.getElementById('usageCount').textContent=currentUser.premium?'Unlimited':currentUser.uses;
- document.getElementById('usageBadge').textContent=currentUser.premium?'Premium Unlimited':currentUser.uses+' Free Uses';
- document.getElementById('membership').textContent=currentUser.premium?'Premium':'Free';
-}
-function logout(){currentUser=null;home()}
-function premiumDemo(){
- hideAll();document.getElementById('premiumPage').style.display='block';
-}
-function openTool(id){
- if(!currentUser){showAuth('login');return}
- currentTool=toolsList.find(t=>t.id===id);
- hideAll();
- document.getElementById('toolPage').style.display='block';
- document.getElementById('toolTitle').textContent=currentTool.name;
- document.getElementById('toolDescription').textContent=currentTool.desc;
- document.getElementById('toolResult').classList.add('hidden');
- document.getElementById('resultActions').classList.add('hidden');
- let fields='';
- if(id==='content')fields=`
- <div class="field"><label>Topic or Subject</label><input id="topic" placeholder="Example: Festival Sale"></div>
- <div class="field"><label>Platform</label><select id="platform"><option>Instagram</option><option>Facebook</option><option>YouTube</option><option>Blog</option><option>School Project</option></select></div>
- <div class="field"><label>Content Type</label><select id="contentType"><option>Social Media Post</option><option>Caption</option><option>Title</option><option>Hashtags</option><option>Blog</option><option>School Explanation</option><option>Advertisement</option></select></div>
- <div class="field"><label>Tone</label><select id="tone"><option>Simple</option><option>Professional</option><option>Creative</option><option>Friendly</option></select></div>`;
- if(id==='resume')fields=`
- <div class="field"><label>Full Name</label><input id="rname" placeholder="Your name"></div>
- <div class="field"><label>Education</label><input id="education" placeholder="Your education"></div>
- <div class="field"><label>Skills</label><input id="skills" placeholder="Your skills"></div>
- <div class="field"><label>Hobbies</label><input id="hobbies" placeholder="Your hobbies"></div>
- <div class="field"><label>Career Objective</label><textarea id="objective" placeholder="Your career objective"></textarea></div>`;
- if(id==='logo')fields=`
- <div class="field"><label>Company Name</label><input id="brand" placeholder="Your brand name"></div>
- <div class="field"><label>Style</label><select id="style"><option>Modern</option><option>Simple</option><option>Minimal</option><option>Professional</option><option>Creative</option></select></div>
- <div class="field"><label>Preferred Colors</label><input id="colors" placeholder="Blue and white"></div>`;
- if(id==='presentation')fields=`
- <div class="field"><label>Presentation Topic</label><input id="ptopic" placeholder="Example: Photosynthesis"></div>
- <div class="field"><label>Number of Slides</label><input id="slides" type="number" min="1" max="20" value="5"></div>
- <div class="field"><label>Audience</label><select id="audience"><option>School</option><option>College</option><option>Business</option><option>General</option></select></div>`;
- if(id==='image')fields=`
- <div class="field"><label>Upload Reference Image</label><input id="imageFile" type="file" accept="image/*"></div>
- <div class="field"><label>Describe the changes or new style</label><textarea id="imagePrompt" placeholder="Describe the image you want..."></textarea></div>
- <p class="small">This demo can preview your selected image but cannot generate a new image yet.</p>
- <img id="imagePreview" style="max-width:100%;max-height:250px;margin-top:15px;display:none;border-radius:12px">`;
- document.getElementById('toolFields').innerHTML=fields;
- if(id==='image'){
- document.getElementById('imageFile').addEventListener('change',e=>{
- const file=e.target.files[0];if(!file)return;
- const preview=document.getElementById('imagePreview');
- preview.src=URL.createObjectURL(file);preview.style.display='block';
- });
- }
-}
-function generate(){
- if(!currentUser)return;
- if(!currentUser.premium&&currentUser.uses<=0){
- alert('Your 5 free uses are finished. Please view Premium.');
- premiumDemo();return;
- }
- let id=currentTool.id,out='';
- const val=x=>document.getElementById(x)?.value.trim()||'';
- if(id==='content'){
- const topic=val('topic');if(!topic){alert('Enter a topic');return}
- const platform=val('platform'),type=val('contentType');
- out=`TITLE: ${topic}\n\nPLATFORM: ${platform}\n\nCONTENT:\nHere is a sample ${type.toLowerCase()} about ${topic}. Add useful information, explain the main idea clearly and make it interesting for your audience.\n\nHASHTAGS:\n#${topic.replace(/\W+/g,'')} #${platform} #CreativeContent #Ideas\n\nNote: These are sample suggestions, not verified trending hashtags.`;
- }
- if(id==='resume'){
- if(!val('rname')){alert('Enter your name');return}
- out=`RESUME\n\n${val('rname')}\n\nEDUCATION\n${val('education')}\n\nSKILLS\n${val('skills')}\n\nHOBBIES\n${val('hobbies')}\n\nCAREER OBJECTIVE\n${val('objective')}\n\nDEALVERSE AI RESUME DRAFT`;
- }
- if(id==='logo'){
- if(!val('brand')){alert('Enter company name');return}
- out=`LOGO CONCEPT\n\nBrand: ${val('brand')}\nStyle: ${val('style')}\nColors: ${val('colors')}\n\nSuggested idea: Use a clear brand wordmark, a simple matching icon and balanced typography.`;
- }
- if(id==='presentation'){
- const topic=val('ptopic'),n=Math.max(1,Math.min(20,Number(val('slides'))||5));
- if(!topic){alert('Enter presentation topic');return}
- out=`PRESENTATION: ${topic}\n\n`;
- for(let i=1;i<=n;i++)out+=`SLIDE ${i}: ${i===1?'Introduction':i===n?'Conclusion':topic+' - Key Point '+i}\n• Introduce the main idea.\n• Explain an important point.\n• Add a relevant example.\n\n`;
- }
- if(id==='image'){
- const file=document.getElementById('imageFile').files[0];
- if(!file){alert('Upload a reference image');return}
- out='Image selected: '+file.name+'\n\nYour reference image has been previewed. Actual image-to-image generation requires an AI image API.';
- }
- if(!currentUser.premium)currentUser.uses--;
- lastResult=out;
- document.getElementById('toolResult').textContent=out;
- document.getElementById('toolResult').classList.remove('hidden');
- document.getElementById('resultActions').classList.remove('hidden');
-}
-function copyResult(){
- if(lastResult)navigator.clipboard?.writeText(lastResult).then(()=>alert('Copied!')).catch(()=>alert('Please select and copy the text.'));
-}
-function downloadResult(){
- const blob=new Blob([lastResult],{type:'text/plain'});
- const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='dealverse-result.txt';a.click();URL.revokeObjectURL(a.href);
-}
-function contactDemo(){
- document.getElementById('contactStatus').textContent='Demo only: Contact form backend is not connected yet.';
-}
-home();
-</script>
-</body>
-  </html>
-  
+const toolInfo={
+content:{
+title:'AI Content Generator',
+desc:'Create caption
